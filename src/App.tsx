@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import Producto from './Producto';
+import AddToCart from './AddToCart';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+return (
+<div className="App">
+  <div className="alert alert-primary" role="alert">
+  ¡Hola Mundo!
+  </div>
+  <Producto
+  showChildren
+  color="red"
+  price={12}
+  isFruit={true}
+  detail={{
+  title: 'Platano',
+  text: 'es un fruto comestible, de varios tipos de grandes plantas herbáceas del género Musa',
+  }} > </Producto>
+  <AddToCart></AddToCart>
 
+</div>
+);
+}
 export default App;
